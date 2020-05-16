@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+require_once 'https://www.j4company.com/contact-form/vendor/autoload.php';
 
 $helperLoader = new SplClassLoader('Helpers', './vendor');
 $mailLoader   = new SplClassLoader('SimpleMail', './vendor');
@@ -11,7 +11,7 @@ use Helpers\Config;
 use SimpleMail\SimpleMail;
 
 $config = new Config;
-$config->load('./config/config.php');
+$config->load('https://www.j4company.com/contact-form/config/config.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name    = stripslashes(trim($_POST['form-name']));
@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <?php endif; ?>
 
-    <script type="text/javascript" src="public/js/contact-form.js"></script>
+    <script type="text/javascript" src="https://www.j4company.com/contact-form/public/js/contact-form.js"></script>
     <script type="text/javascript">
         new ContactForm('#contact-form');
     </script>
